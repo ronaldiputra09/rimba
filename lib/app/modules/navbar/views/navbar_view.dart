@@ -37,14 +37,14 @@ class NavbarView extends GetView<NavbarController> {
             Icons.list,
             color: controller.index.value == 0 ? primaryBlue : primaryBlack,
           ),
-          label: 'Products',
+          label: 'title_product'.tr,
         ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.timeline_rounded,
             color: controller.index.value == 1 ? primaryBlue : primaryBlack,
           ),
-          label: 'Transaction',
+          label: 'title_trx'.tr,
         ),
       ],
     );
@@ -53,7 +53,7 @@ class NavbarView extends GetView<NavbarController> {
   bodyNav() {
     switch (controller.index.value) {
       case 0:
-        return const ProductView();
+        return ProductView();
       case 1:
         return const TransactionView();
       default:

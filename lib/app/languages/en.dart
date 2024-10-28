@@ -15,4 +15,27 @@ const Map<String, String> en = {
   'hint_name': 'Enter your name',
   'hint_phone': 'Enter your phone number',
   'hint_password_confirm': 'Confirm password',
+
+  // NAVBAR TITLE
+  'title_product': 'Product',
+  'title_trx': 'Transaction',
+
+  // PRODUCT PAGE
+  'title_product_page': 'List Product',
+  'title_product_add': 'Add Product',
+  'title_product_edit': 'Edit Product',
+  'title_product_detail': 'Detail Product',
+  'title_product_delete': 'Delete Product',
+  'enter_product_name': 'Enter product name',
+  'confirm_delete_product': 'Are you sure?',
+
+  // GLOBAL
+  'data_empty': 'Data empty',
+  'cancel': 'Cancel',
+  'save': 'Save',
+  'delete': 'Delete',
+  'edit': 'Edit',
+  'confirm': 'Confirm',
+  'sure': 'Sure',
+  'ok': 'Ok',
 };

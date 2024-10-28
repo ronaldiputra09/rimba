@@ -6,4 +6,7 @@ class ApiPath {
   // AUTH
   static const REGISTER = "/auth/register";
   static const LOGIN = "/auth/login";
+
+  // PRODUCT
+  static const PRODUCT = "/product";
 }

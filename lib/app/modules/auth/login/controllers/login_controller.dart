@@ -47,7 +47,7 @@ class LoginController extends GetxController {
         },
       );
       var data = res.data['data'];
-      box.write('token', data['token']);
+      box.write('token', data['accessToken']);
       box.write('user', data);
       Get.offAllNamed('/navbar');
     } catch (e) {

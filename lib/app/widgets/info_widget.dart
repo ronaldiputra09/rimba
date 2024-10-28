@@ -8,7 +8,7 @@ Future infoWidget({
   String title = "Informasi",
   required String type,
   required String message,
-  String textButton = "Baik",
+  String? textButton,
   Function()? onPressed,
 }) {
   return Get.defaultDialog(
@@ -41,7 +41,7 @@ Future infoWidget({
           children: [
             Expanded(
               child: ButtonWidget(
-                title: textButton,
+                title: textButton ?? "ok".tr,
                 color: type == "success" ? primaryBlue : primaryRed,
                 onPressed: onPressed ?? () => Get.back(),
               ),

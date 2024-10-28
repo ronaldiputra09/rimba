@@ -18,7 +18,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN;
+  static const INITIAL = Routes.NAVBAR;
 
   static final routes = [
     GetPage(
@@ -38,7 +38,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.PRODUCT,
-      page: () => const ProductView(),
+      page: () => ProductView(),
       binding: ProductBinding(),
     ),
     GetPage(

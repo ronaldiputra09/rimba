@@ -5,13 +5,15 @@ import 'package:test_rimba/app/data/colors.dart';
 import 'package:test_rimba/app/widgets/button_widget.dart';
 
 Future confirmWidget({
-  String title = "Konfirmasi",
+  String? title,
   required String message,
+  RxBool? loading,
   Function()? onPressed,
 }) {
+  loading ??= false.obs;
   return Get.defaultDialog(
     barrierDismissible: false,
-    title: title,
+    title: title ?? "confirm".tr,
     titlePadding: const EdgeInsets.only(top: 20),
     contentPadding: const EdgeInsets.symmetric(horizontal: 20),
     content: Column(
@@ -32,24 +34,28 @@ Future confirmWidget({
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 24),
-        Row(
-          children: [
-            Expanded(
-              child: ButtonWidget(
-                title: "Batal",
-                color: primaryRed,
-                onPressed: () => Get.back(),
+        Obx(
+          () => Row(
+            children: [
+              Expanded(
+                child: ButtonWidget(
+                  title: "cancel".tr,
+                  color: primaryRed,
+                  loading: loading!.value,
+                  onPressed: () => Get.back(),
+                ),
               ),
-            ),
-            const SizedBox(width: 10),
-            Expanded(
-              child: ButtonWidget(
-                title: "Yakin",
-                color: primaryBlue,
-                onPressed: onPressed ?? () => Get.back(),
+              const SizedBox(width: 10),
+              Expanded(
+                child: ButtonWidget(
+                  title: "sure".tr,
+                  color: primaryBlue,
+                  loading: loading.value,
+                  onPressed: onPressed ?? () => Get.back(),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ],
     ),
