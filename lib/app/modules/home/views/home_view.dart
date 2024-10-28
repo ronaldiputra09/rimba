@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:test_rimba/app/widgets/button_widget.dart';
-import 'package:test_rimba/app/widgets/info_widget.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -22,7 +21,7 @@ class HomeView extends GetView<HomeController> {
             ButtonWidget(
               title: "Button",
               onPressed: () {
-                infoWidget(type: 'success', message: 'Error Message');
+                Get.toNamed('/login');
               },
             ),
           ],
