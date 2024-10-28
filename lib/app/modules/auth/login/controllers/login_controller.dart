@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
+  var isVisibility = false.obs;
   @override
   void onInit() {
     super.onInit();

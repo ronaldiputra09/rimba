@@ -85,7 +85,7 @@ class FormWidget extends StatelessWidget {
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,
             filled: true,
-            fillColor: color ?? primaryGrey,
+            fillColor: color ?? primaryGrey.withOpacity(0.5),
             contentPadding: const EdgeInsets.symmetric(
               horizontal: 20,
               vertical: 18,
