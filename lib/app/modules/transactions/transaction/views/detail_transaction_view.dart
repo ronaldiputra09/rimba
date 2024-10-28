@@ -14,38 +14,47 @@ class DetailTransactionView extends GetView {
   final trxC = Get.put(TransactionController());
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('title_trx_detail'.tr),
-        centerTitle: true,
-      ),
-      bottomNavigationBar: _checkout(),
-      body: FutureBuilder(
-        future: trxC.getDetailTrx(Get.arguments),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
-              child: LoadingWidget(
-                size: 25,
-                color: Colors.blue,
-              ),
-            );
-          } else {
-            trxC.customerC.value.text = trxC.dataDetailTrx.value.customer ?? '';
-            return Obx(
-              () => SingleChildScrollView(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  children: [
-                    _body(),
-                    const SizedBox(height: 14),
-                    _listProduct()
-                  ],
+    // ignore: deprecated_member_use
+    return WillPopScope(
+      onWillPop: () async {
+        Get.back();
+        trxC.dataCart.clear();
+        return true;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('title_trx_detail'.tr),
+          centerTitle: true,
+        ),
+        bottomNavigationBar: _checkout(),
+        body: FutureBuilder(
+          future: trxC.getDetailTrx(Get.arguments),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return Center(
+                child: LoadingWidget(
+                  size: 25,
+                  color: Colors.blue,
                 ),
-              ),
-            );
-          }
-        },
+              );
+            } else {
+              trxC.customerC.value.text =
+                  trxC.dataDetailTrx.value.customer ?? '';
+              return Obx(
+                () => SingleChildScrollView(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      _body(),
+                      const SizedBox(height: 14),
+                      _listProduct()
+                    ],
+                  ),
+                ),
+              );
+            }
+          },
+        ),
       ),
     );
   }
