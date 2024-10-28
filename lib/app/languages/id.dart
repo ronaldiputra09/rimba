@@ -29,6 +29,28 @@ const Map<String, String> id = {
   'enter_product_name': 'Masukan nama produk',
   'confirm_delete_product': 'Apakah anda yakin?',
 
+  // TRANSACTION PAGE
+  'title_trx_page': 'Daftar Transaksi',
+  'title_trx_add': 'Tambah Transaksi',
+  'title_trx_edit': 'Ubah Transaksi',
+  'title_trx_detail': 'Detail Transaksi',
+  'title_trx_delete': 'Hapus Transaksi',
+  'enter_trx_name': 'Masukan nama transaksi',
+  'confirm_delete_trx': 'Apakah anda yakin?',
+  'add_cart': 'Tambah ke keranjang',
+
+  // CART PAGE
+  'title_cart_page': 'Keranjang',
+  'enter_cust_name': 'Masukan nama pelanggan',
+
+  // TRANSACTION PAGE DETAIL
+  'invoice_no': 'No. Invoice',
+  'date': 'Tanggal',
+  'customer': 'Pelanggan',
+  'product': 'Produk',
+  'quantity': 'Jumlah',
+  'total': 'Total',
+
   // GLOBAL
   'data_empty': 'Data kosong',
   'cancel': 'Batal',

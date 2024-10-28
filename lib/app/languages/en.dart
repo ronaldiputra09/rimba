@@ -29,6 +29,28 @@ const Map<String, String> en = {
   'enter_product_name': 'Enter product name',
   'confirm_delete_product': 'Are you sure?',
 
+  // TRANSACTION PAGE
+  'title_trx_page': 'List Transaction',
+  'title_trx_add': 'Add Transaction',
+  'title_trx_edit': 'Edit Transaction',
+  'title_trx_detail': 'Detail Transaction',
+  'title_trx_delete': 'Delete Transaction',
+  'enter_trx_name': 'Enter transaction name',
+  'confirm_delete_trx': 'Are you sure?',
+  'add_cart': 'Add to cart',
+
+  // CART PAGE
+  'title_cart_page': 'Cart',
+  'enter_cust_name': 'Enter customer name',
+
+  // TRANSACTION PAGE DETAIL
+  'invoice_no': 'Invoice No',
+  'date': 'Date',
+  'customer': 'Customer',
+  'product': 'Product',
+  'quantity': 'Quantity',
+  'total': 'Total',
+
   // GLOBAL
   'data_empty': 'Data empty',
   'cancel': 'Cancel',

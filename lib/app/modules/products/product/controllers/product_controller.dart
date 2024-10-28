@@ -91,7 +91,6 @@ class ProductController extends GetxController {
     isLoading(true);
     try {
       final res = await dio.delete('${ApiPath.PRODUCT}/$id');
-      nameC.value.clear();
       var data = res.data['message'];
       getProduct();
       infoWidget(

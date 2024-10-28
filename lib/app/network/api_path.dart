@@ -9,4 +9,7 @@ class ApiPath {
 
   // PRODUCT
   static const PRODUCT = "/product";
+
+  // TRANSACTION
+  static const TRANSACTION = "/transaction";
 }

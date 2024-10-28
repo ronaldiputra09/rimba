@@ -55,7 +55,7 @@ class NavbarView extends GetView<NavbarController> {
       case 0:
         return ProductView();
       case 1:
-        return const TransactionView();
+        return TransactionView();
       default:
         return LoginView();
     }

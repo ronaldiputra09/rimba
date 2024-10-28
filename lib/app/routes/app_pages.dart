@@ -3,6 +3,8 @@ import 'package:test_rimba/app/modules/navbar/views/navbar_view.dart';
 import 'package:test_rimba/app/modules/products/product/bindings/product_binding.dart';
 import 'package:test_rimba/app/modules/products/product/views/product_view.dart';
 import 'package:test_rimba/app/modules/transactions/transaction/bindings/transaction_binding.dart';
+import 'package:test_rimba/app/modules/transactions/transaction/views/cart_view.dart';
+import 'package:test_rimba/app/modules/transactions/transaction/views/detail_transaction_view.dart';
 import 'package:test_rimba/app/modules/transactions/transaction/views/transaction_view.dart';
 
 import '../modules/auth/login/bindings/login_binding.dart';
@@ -43,8 +45,16 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.TRANSACTION,
-      page: () => const TransactionView(),
+      page: () => TransactionView(),
       binding: TransactionBinding(),
+    ),
+    GetPage(
+      name: _Paths.CART,
+      page: () => CartView(),
+    ),
+    GetPage(
+      name: _Paths.DETAIL_TRANSACTION,
+      page: () => DetailTransactionView(),
     ),
   ];
 }
