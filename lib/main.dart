@@ -19,6 +19,7 @@ void main() async {
       translations: Language(),
       locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'ID'),
+      debugShowCheckedModeBanner: false,
     ),
   );
 }
