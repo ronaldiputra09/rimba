@@ -18,7 +18,7 @@ void main() async {
       theme: Themes.light,
       translations: Language(),
       locale: Get.deviceLocale,
-      fallbackLocale: const Locale('en', 'US'),
+      fallbackLocale: const Locale('en', 'ID'),
     ),
   );
 }

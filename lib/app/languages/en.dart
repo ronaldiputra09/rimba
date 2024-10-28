@@ -8,4 +8,11 @@ const Map<String, String> en = {
   'text_have_account': 'Already have an account?',
   'button_login': 'Login',
   'button_register': 'Register',
+
+  // REGISTER PAGE
+  'title_register': 'Register',
+  'subtitle_register': 'Please enter your personal data',
+  'hint_name': 'Enter your name',
+  'hint_phone': 'Enter your phone number',
+  'hint_password_confirm': 'Confirm password',
 };

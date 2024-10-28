@@ -8,4 +8,11 @@ const Map<String, String> id = {
   'text_have_account': 'Sudah punya akun?',
   'button_login': 'Masuk',
   'button_register': 'Daftar',
+
+  // REGISTER PAGE
+  'title_register': 'Daftar',
+  'subtitle_register': 'Silahkan masukan data diri anda',
+  'hint_name': 'Masukan nama anda',
+  'hint_phone': 'Masukan nomor telepon anda',
+  'hint_password_confirm': 'Konfirmasi password',
 };
