@@ -12,6 +12,7 @@ abstract class Routes {
   static const TRANSACTION = _Paths.TRANSACTION;
   static const CART = _Paths.CART;
   static const DETAIL_TRANSACTION = '/detail-transaction';
+  static const SPLASH = _Paths.SPLASH;
 }
 
 abstract class _Paths {
@@ -23,4 +24,5 @@ abstract class _Paths {
   static const TRANSACTION = '/transaction';
   static const CART = '/cart';
   static const DETAIL_TRANSACTION = '/detail-transaction';
+  static const SPLASH = '/splash';
 }

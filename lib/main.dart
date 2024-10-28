@@ -12,7 +12,7 @@ void main() async {
   await GetStorage.init();
   runApp(
     GetMaterialApp(
-      title: "Rimba Apps",
+      title: "Rimba App",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       theme: Themes.light,
