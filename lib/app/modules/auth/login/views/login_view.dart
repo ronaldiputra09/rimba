@@ -39,12 +39,12 @@ class LoginView extends GetView<LoginController> {
         children: [
           InkWell(
             onTap: () {
-              controller.changeLanguage("en_US");
+              loginC.changeLanguage("en_US");
             },
             child: CircleAvatar(
               radius: 15,
-              backgroundColor: controller.language.value == "en_US" ||
-                      controller.language.value == "en_ID"
+              backgroundColor: loginC.language.value == "en_US" ||
+                      loginC.language.value == "en_ID"
                   ? primaryOrange
                   : primaryBlack.withOpacity(0.3),
               child: const Text('EN', style: TextStyle(fontSize: 12)),
@@ -53,11 +53,11 @@ class LoginView extends GetView<LoginController> {
           const SizedBox(width: 10),
           InkWell(
             onTap: () {
-              controller.changeLanguage("id_ID");
+              loginC.changeLanguage("id_ID");
             },
             child: CircleAvatar(
               radius: 15,
-              backgroundColor: controller.language.value == "id_ID"
+              backgroundColor: loginC.language.value == "id_ID"
                   ? primaryOrange
                   : primaryBlack.withOpacity(0.3),
               child: const Text('ID', style: TextStyle(fontSize: 12)),
@@ -93,6 +93,7 @@ class LoginView extends GetView<LoginController> {
     return Column(
       children: [
         FormWidget(
+          controller: loginC.emailC.value,
           hintText: 'hint_email'.tr,
           keyboardType: TextInputType.emailAddress,
           prefixIcon: const Icon(Icons.email),
@@ -100,15 +101,16 @@ class LoginView extends GetView<LoginController> {
         const SizedBox(height: 20),
         Obx(
           () => FormWidget(
+            controller: loginC.passwordC.value,
             hintText: 'hint_password'.tr,
-            obscureText: controller.isVisibility.value,
+            obscureText: loginC.isVisibility.value,
             prefixIcon: const Icon(Icons.lock),
             suffixIcon: InkWell(
               onTap: () {
-                controller.isVisibility.toggle();
+                loginC.isVisibility.toggle();
               },
               child: Icon(
-                controller.isVisibility.value
+                loginC.isVisibility.value
                     ? Icons.visibility
                     : Icons.visibility_off,
               ),
@@ -122,9 +124,16 @@ class LoginView extends GetView<LoginController> {
   Widget _footer() {
     return Column(
       children: [
-        ButtonWidget(
-          title: 'button_login'.tr,
-          onPressed: () {},
+        Obx(
+          () => ButtonWidget(
+            title: 'button_login'.tr,
+            loading: loginC.isLoading.value,
+            onPressed: () {
+              if (loginC.isLoading.isFalse) {
+                loginC.loginPOST();
+              }
+            },
+          ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
