@@ -8,7 +8,8 @@ import 'package:test_rimba/app/widgets/form_widget.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
-  const LoginView({super.key});
+  LoginView({super.key});
+  final loginC = Get.put(LoginController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
